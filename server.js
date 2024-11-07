@@ -6,6 +6,8 @@ const courseRoutes = require("./courseRoute");
 const blogRoutes = require("./blogRoute");
 const paymentRoutes = require("./paymentRoute");
 
+require("dotenv").config();
+
 // Create an Express app
 const app = express();
 
@@ -16,13 +18,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(
-  "mongodb+srv://Tushar:Tushar%401234@cluster0.uirss.mongodb.net/blog_data",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // Check if the connection is successful
 mongoose.connection.on("connected", () => {
