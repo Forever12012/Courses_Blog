@@ -17,7 +17,7 @@ export default function Home() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/courses/getCourses"
+          "https://courses-blog.onrender.com/courses/getCourses"
         );
         setCourses(response.data.courses); // Assuming your API response contains a "courses" array
         setLoadingCourses(false);
@@ -35,7 +35,7 @@ export default function Home() {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/blogs/getBlogs"
+          "https://courses-blog.onrender.com/blogs/getBlogs"
         );
         setBlogs(response.data.blogs); // Assuming your API response contains a "blogs" array
         setLoadingBlogs(false);

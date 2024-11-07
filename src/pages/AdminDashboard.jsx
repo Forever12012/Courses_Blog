@@ -22,7 +22,7 @@ export default function AdminDashboard() {
     async function fetchCourses() {
       try {
         const response = await axios.get(
-          "http://localhost:8000/courses/getCourses"
+          "https://courses-blog.onrender.com/courses/getCourses"
         );
         setCourses(response.data.courses);
       } catch (error) {
@@ -48,7 +48,7 @@ export default function AdminDashboard() {
       // Editing an existing course
       try {
         const response = await axios.put(
-          `http://localhost:8000/courses/updateCourse/${editCourse._id}`,
+          `https://courses-blog.onrender.com/courses/updateCourse/${editCourse._id}`,
           newCourse
         );
         setCourses(
@@ -74,7 +74,7 @@ export default function AdminDashboard() {
       // Adding a new course
       try {
         const response = await axios.post(
-          "http://localhost:8000/courses/addCourse",
+          "https://courses-blog.onrender.com/courses/addCourse",
           newCourse
         );
         setCourses((prevCourses) => [...prevCourses, response.data.course]);
@@ -99,7 +99,7 @@ export default function AdminDashboard() {
   const handleDeleteCourse = async (courseId) => {
     try {
       await axios.delete(
-        `http://localhost:8000/courses/deleteCourse/${courseId}`
+        `https://courses-blog.onrender.com/courses/deleteCourse/${courseId}`
       );
       // Remove the deleted course from the state
       setCourses(courses.filter((course) => course._id !== courseId));

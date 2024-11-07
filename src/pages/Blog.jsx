@@ -12,7 +12,7 @@ export default function Blog() {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/blogs/getBlogs"
+          "https://courses-blog.onrender.com/blogs/getBlogs"
         );
         setPosts(response.data.blogs);
         setLoading(false);

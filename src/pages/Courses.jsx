@@ -15,7 +15,7 @@ export default function Courses() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/courses/getCourses"
+          "https://courses-blog.onrender.com/courses/getCourses"
         );
         setCourses(response.data.courses); // Assuming your response contains the courses array
       } catch (err) {
@@ -39,10 +39,13 @@ export default function Courses() {
   const handlePaymentComplete = async () => {
     // Store payment details in the database
     try {
-      await axios.post("http://localhost:8000/payment/storePayment", {
-        courseId: selectedCourse.id,
-        amount: selectedCourse.discountedPrice,
-      });
+      await axios.post(
+        "https://courses-blog.onrender.com/payment/storePayment",
+        {
+          courseId: selectedCourse.id,
+          amount: selectedCourse.discountedPrice,
+        }
+      );
       alert("Payment successful! You can now access the course.");
     } catch (err) {
       alert("Error storing payment: " + err.message);

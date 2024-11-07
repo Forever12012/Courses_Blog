@@ -21,7 +21,7 @@ export default function EditCourse() {
     async function fetchCourse() {
       try {
         const response = await axios.get(
-          `http://localhost:8000/courses/getCourse/${id}`
+          `https://courses-blog.onrender.com/courses/getCourse/${id}`
         );
         setCourse(response.data.course);
       } catch (error) {
@@ -45,7 +45,7 @@ export default function EditCourse() {
 
     try {
       const response = await axios.put(
-        `http://localhost:8000/courses/updateCourse/${id}`,
+        `https://courses-blog.onrender.com/courses/updateCourse/${id}`,
         course
       );
       navigate("/"); // Go back to the dashboard after saving
