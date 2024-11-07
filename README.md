@@ -44,3 +44,10 @@
 
 4. Start the development server:
      - npm run dev
+
+## Responsive Design
+
+This project uses Tailwind CSS’s responsive utilities to ensure that the app works well on all screen sizes. The layout adapts automatically based on the screen size.
+
+- On mobile devices, the navigation menu will collapse into a hamburger menu.
+- On larger screens, the navigation and content will display side-by-side for a better user experience.
