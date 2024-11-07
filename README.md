@@ -28,3 +28,19 @@
 - React: A JavaScript library for building user interfaces.
 - Tailwind CSS: A utility-first CSS framework for styling the application.
 - Axios: For making API requests to the backend server.
+
+## Installation
+
+### To run the project locally, follow these steps:
+
+1. Clone the repository:
+     - git clone -b Frontend https://github.com/Forever12012/Courses_Blog.git
+       
+2. Navigate to the project directory:
+     - cd courses-blog
+
+3. Install dependencies:
+     - npm install
+
+4. Start the development server:
+     - npm run dev
