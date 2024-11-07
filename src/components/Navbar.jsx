@@ -82,10 +82,10 @@ export default function Navbar() {
               Blog
             </Link>
             <Link
-              to="/login"
+              to="/admin"
               className="bg-white text-indigo-600 hover:bg-indigo-50 block px-3 py-2 rounded-md"
             >
-              Login
+              Admin
             </Link>
           </div>
         </div>
